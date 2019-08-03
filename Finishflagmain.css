@@ -1,0 +1,221 @@
+@font-face {
+  font-family: MyFirstFont;
+  src: url(futura_pt_heavy_oblique.otf);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: MyFirstFont;
+  letter-spacing: 1px;
+  background-color: #D6D2D0;
+  background-image: url("background1.jpg");
+  background-position: center;
+  background-repeat: round;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#topbar {
+  width: 100%;
+  height: 72px;
+  margin: 0 auto;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  /* z-index: -1; */
+}
+
+.favicon {
+  width: 60px;
+  height: 65px;
+  margin: 0 auto;
+  z-index: 5;
+  position: relative;
+}
+
+#logo {
+  width: 60px;
+  height: 65px;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  padding-top: 3px;
+  border: 1px solid black
+}
+
+#logo2 {
+  display: none;
+}
+
+.top-menu-section {
+  height: 37px;
+  position: absolute;
+  z-index: 10;
+  float: left;
+  top: 21px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tmenu-right {
+  width: 500px;
+  height: 37px;
+  position: relative;
+  z-index: 10;
+  float: right;
+  top: -43px;
+  left: -100px;
+}
+
+.word {
+  padding: 13px 30px 0 35px;
+}
+
+.word2 {
+  padding-left: 104px;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+#mainbody {
+  margin-top: 100px;
+}
+
+#mainimage {
+  height: 100%;
+  width: 91%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bio {
+  background-color: #D6D2D0;
+  font-size: 20px;
+  padding: 2px 60px;
+  margin-top: 100px;
+}
+
+.live {
+  background-color: #C4BFBC;
+  margin-top: 100px;
+  height: 200px;
+}
+
+@media (min-width: 310px) and (max-width: 769px) {
+  body {
+    background-repeat: repeat-y;
+  }
+  .top-menu-section {
+    display: none;
+  }
+  .tmenu-right {
+    display: none;
+  }
+  .favicon {
+    float: left;
+    height: 50px;
+  }
+  #logo {
+    display: none;
+  }
+  #logo2 {
+    width: 167px;
+    height: 31px;
+    display: block;
+    padding-top: 11px;
+    position: absolute;
+    padding-left: 10px;
+  }
+  #topbar {
+    height: 50px;
+  }
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    display: inherit;
+  }
+  .header li {
+    display: block;
+    padding: 16px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  /* menu */
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  /* menu icon */
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  /* menu btn */
+  .header .menu-btn {
+    display: none;
+  }
+  .header .menu-btn:checked~.menu {
+    max-height: 361px;
+  }
+  .header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+  }
+  .header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  .header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  #mainimage {
+    height: 50%;
+    width: 93%;
+    margin-top: -20px;
+  }
+}
